@@ -4,7 +4,7 @@
 #include <QWidget>
 
 namespace Ui {
-class FlightPath;
+class FlightPath2;
 }
 
 class FlightPath : public QWidget
@@ -16,7 +16,7 @@ public:
     ~FlightPath();
 
 private:
-    Ui::FlightPath *ui;
+    Ui::FlightPath2 *ui;
 
     const int STEP = 1;
 

@@ -1,5 +1,5 @@
 #include "FlightPath.h"
-#include "ui_FlightPath.h"
+#include "ui_FlightPath2.h"
 
 #include <QString>
 #include <QVector2D>
@@ -9,7 +9,7 @@
 
 FlightPath::FlightPath(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::FlightPath)
+    ui(new Ui::FlightPath2)
 {
     ui->setupUi(this);
 

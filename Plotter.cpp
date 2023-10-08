@@ -152,6 +152,7 @@ void Plotter::refresh()
     //
     // legend
     //
+
     plot->addGraph();
     plot->graph()->setName("in air");
     plot->graph()->setPen(QPen(Qt::green, 2));
@@ -161,14 +162,17 @@ void Plotter::refresh()
     plot->graph()->setPen(QPen(Qt::blue, 2));
 
     plot->addGraph();
-    plot->graph()->setName("above ground");
+    plot->graph()->setName("above\nground");
     plot->graph()->setPen(QPen(Qt::red, 3));
 
+    plot->plotLayout()->addElement(1, 0, plot->legend);
+    plot->plotLayout()->setRowStretchFactor(1, 0.01);
 
     // custom_lines = [Line2D([0], [0], color='green', lw=2), Line2D([0], [0], color='blue',  lw=2), Line2D([0], [0], color='red',   lw=2)];
 
     // plot->axes.legend(custom_lines, ("in air","wind","ground"), bbox_to_anchor=(1.00, 0.50), loc='center left');
 
+    plot->legend->expandTo(1,3);
     plot->legend->setVisible(true);
     plot->replot();
 }

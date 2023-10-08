@@ -26,6 +26,7 @@ HEADERS += \
 
 FORMS += \
     FlightPath.ui \
+    FlightPath2.ui \
     mainwindow.ui
 
 # Default rules for deployment.
